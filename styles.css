@@ -1,63 +1,108 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body{
-  background: #000000;  /* fallback for old browsers */
-
-  font-family:'Open Sans', sans-serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
 
-h1{ 
-  font-size: 3.5em;
+body {
+  background: #000000;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+}
+
+h1 {
+  font-size: 2em;
   font-weight: 300;
   color: #EAE8DE;
   text-align: left;
-  padding-left: 25px;
-  
+  padding: 25px;
 }
 
-p{
+p {
   padding: 25px 100px 0px 100px;
   color: #EAE8DE;
   font-weight: 300;
 }
-.titulos{
+
+.titulos {
   font-size: 20px;
   color: #EAE8DE;
   text-align: center;
 }
 
-.content{
+.content {
   max-width: 1400px;
-  margin:auto;
+  margin: auto;
   padding: 25px;
+  flex: 1; /* Esto hace que el contenido ocupe el espacio disponible */
 }
 
-.content > h2{
-  color: #3556;
-}
-nav{
+
+nav {
   text-align: right;
   padding: 10px 50px 0 0;
+  text-decoration: none;
 }
 
-nav > a{
+.content-rrss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #000;
+  color: #EAE8DE;
+  text-decoration: none;
+  font-size: 16px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.content-rrss:hover {
+  color: #000;
+  text-shadow: none;
+}
+
+.enlaces {
   color: #EAE8DE;
   font-weight: 300;
-  text-decoration: none;;
   margin-right: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
-nav > a:hover{
-  text-decoration: underline;
+.enlaces:hover {
+  background-color: #000;
+  text-shadow: 0 0 10px #EAE8DE, 0 0 10px #EAE8DE, 0 0 10px #EAE8DE, 0 0 10px #EAE8DE, 0 0 10px #EAE8DE, 0 0 20px #EAE8DE, 0 0 40px #EAE8DE, 0 0 80px #EAE8DE;
 }
 
-footer{
+.enlaces-rrss {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #EAE8DE;
+  text-decoration: none;
+  font-size: 16px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.enlaces-rrss:hover {
+  background-color: #000;
+  text-shadow: 0 0 5px #EAE8DE, 0 0 5px #EAE8DE, 0 0 10px #EAE8DE;
+}
+
+footer {
   display: flex;
-  color:#EAE8DE
-}
 
+}
